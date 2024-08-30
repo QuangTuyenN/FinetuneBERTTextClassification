@@ -1,4 +1,3 @@
-from datasets import Dataset
 from huggingface_hub import login
 import pandas as pd
 import os
@@ -109,7 +108,7 @@ def compute_metrics(pred):
     return {"accuracy": acc, "f1": f1}
 
 
-# xử lý qua hàm tokenize trước khi train
+# xử lý dataset qua hàm tokenize trước khi train
 emotion_encoded = dataset.map(tokenize, batched=True, batch_size=None)
 
 # train model
