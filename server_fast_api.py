@@ -9,7 +9,7 @@ import torch
 from transformers import AutoTokenizer, XLMRobertaForSequenceClassification
 
 # Load model đã finetune và tokenizer
-model_name = "quangtuyennguyen/bert_base_train_dir"  # Thay bằng đường dẫn tới model đã finetune
+model_name = "quangtuyennguyen/vi_xlmroberta_text_classification"  # Thay bằng đường dẫn tới model đã finetune
 
 tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=False)
 model = XLMRobertaForSequenceClassification.from_pretrained(model_name)

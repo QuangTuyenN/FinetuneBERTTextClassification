@@ -78,7 +78,7 @@ config = AutoConfig.from_pretrained(model_ckpt, label2id=label2id, id2label=id2l
 model = XLMRobertaForSequenceClassification.from_pretrained(model_ckpt, config=config, ignore_mismatched_sizes=True).to(device)
 
 batch_size = 64
-training_dir = "quangtuyen_xlm_roberta_text_classification"
+training_dir = "vi_xlmroberta_text_classification"
 
 training_args = TrainingArguments( output_dir=training_dir,
                                   overwrite_output_dir = True,

@@ -8,6 +8,6 @@ Dataset: vietnamese-sentiment-analysis
 
 Train model, eval, push to Huggingface hub by train.py
 
-Deploy model using fastapi by use_model.py
+Deploy model using fastapi by server_fast_api.py
 
 run: uvicorn server_fast_api:app_text_classification --host 0.0.0.0 --port 1234 --reload
