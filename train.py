@@ -11,9 +11,9 @@ import evaluate
 import numpy as np
 
 # Đặt các token vào biến môi trường hoặc gán trực tiếp
-os.environ["HUGGINGFACE_WRITE_TOKEN"] = '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'
+os.environ["HUGGINGFACE_WRITE_TOKEN"] = ''
 
-login('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')
+login(HUGGINGFACE_WRITE_TOKEN)
 
 # khai báo pre train:
 model_ckpt = "5CD-AI/Vietnamese-Sentiment-visobert"
