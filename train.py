@@ -9,9 +9,14 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, f1_score, classification_report
 import evaluate
 import numpy as np
+from dotenv import load_dotenv
 
-# Đặt các token vào biến môi trường hoặc gán trực tiếp
-os.environ["HUGGINGFACE_WRITE_TOKEN"] = ''
+try:
+    load_dotenv(dotenv_path=".env")
+except Exception as bug:
+    print("Error went loading environment variables: ", bug)
+
+HUGGINGFACE_WRITE_TOKEN = os.environ.get("HUGGINGFACE_WRITE_TOKEN", "")
 
 login(HUGGINGFACE_WRITE_TOKEN)
 
